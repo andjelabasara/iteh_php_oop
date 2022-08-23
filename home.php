@@ -62,7 +62,16 @@
 </style>
 </head>
 <body>
-    
+ 
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Dobrodosli!</span>
+    </nav>
+
+
+
+
     <div class="mainPart">
     <input type="text" id="myInput" onkeyup="search()" placeholder="Search for names.." title="Type in a name" style="float:right;font-size:25px;border:none;
     border-radius: 5px;">   <i class="fa fa-search" aria-hidden="true" style="float:right; font-size:30px;padding:4px"></i>
@@ -107,8 +116,12 @@
         </table>
 
     </div>
-
-
+    <br><br><br><br>
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+        </div>
+    </footer>
 
 
 <!-- Update modal -->
