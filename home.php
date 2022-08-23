@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
     .mainPart{
@@ -53,7 +53,7 @@
             <td> <?php echo $row['email']?></td>
             <td>
             <button type="button" class="btn btn-danger" onclick="deletePhone( <?php echo $row['id']   ?>  )">Delete</button>
-            <button type="button" class="btn btn-warning">Update</button></td>
+            <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#updateModal" onclick="getDetailsUpdateModal(<?php echo $row['id']?> )" >Update</button></td>
             </tr>
          
             <?php endwhile;?>
@@ -62,6 +62,90 @@
         </table>
 
     </div>
+
+
+
+
+
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="lblUpdateModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titleUpdate">Update mobile phone</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                              
+                        <form  id="updateform" style="max-width:500px;margin:auto" method="POST" enctype="multipart/form-data">
+ 
+                            <div class="input-container">
+                                <i class="fa fa-user icon"></i>
+                                <input class="input-field" type="text" placeholder="Model" name="modelupdate" id="modelupdate" required>
+                            </div>
+
+                            <div class="input-container">
+                                <i class="fa fa-pencil icon"></i>
+                                <input class="input-field" type="text" placeholder="Description" name="descriptionupdate" id="descriptionupdate" required>
+                            </div>
+                            
+                            <div class="input-container">
+                                <i class="fa fa-tag icon"></i>
+                                <input class="input-field" type="text" placeholder="Price" name="priceupdate" id="priceupdate" required>
+                            </div>
+                            <input  class="input-field" type="text" id="hiddenData" name ="hiddenData" hidden>
+                       
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="update" name="update"  >  Update</button>
+                            
+                        </div>                   
+                    
+                        </form>
+
+
+                        </div>
+                        
+                       
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
