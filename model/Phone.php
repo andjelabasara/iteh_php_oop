@@ -47,14 +47,14 @@ class Phone{
 
     public static function deletePhone($id,$conn){
 
-        $query = "delete from phone where phoneID=$id";
+        $query = "delete from phone where id=$id";
         return $conn->query($query);
 
     }
 
     public static function updatePhone($phone,$conn){
 
-        $query = "update phone set model='$phone->model', description = '$phone->description', price = $phone->price where phoneID = $phone->id";
+        $query = "update phone set model='$phone->model', description = '$phone->description', price = $phone->price where id = $phone->id";
         return $conn->query($query);
 
     }
