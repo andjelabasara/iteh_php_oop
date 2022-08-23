@@ -29,6 +29,8 @@
 <body>
     
     <div class="mainPart">
+    <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#addModal">Dodaj</button>
+    <br>
         <table class="table">
         <thead>
             <tr>
@@ -66,7 +68,7 @@
 
 
 
-
+<!-- Update modal -->
     <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="lblUpdateModal" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -112,14 +114,60 @@
                 </div>
             </div>
         </div>
+<!-- End Update modal -->
 
 
 
 
 
 
+<!-- Add modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="lblUpdateModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titleUpdate">Add mobile phone</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                              
+                        <form  id="addform" style="max-width:500px;margin:auto" method="POST" enctype="multipart/form-data">
+ 
+                            <div class="input-container">
+                                <i class="fa fa-user icon"></i>
+                                <input class="input-field" type="text" placeholder="Model" name="model" id="model" required>
+                            </div>
+
+                            <div class="input-container">
+                                <i class="fa fa-pencil icon"></i>
+                                <input class="input-field" type="text" placeholder="Description" name="description" id="description" required>
+                            </div>
+                            
+                            <div class="input-container">
+                                <i class="fa fa-tag icon"></i>
+                                <input class="input-field" type="text" placeholder="Price" name="price" id="price" required>
+                            </div>
+                          
+                       
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="add" name="add"  >  Add</button>
+                            
+                        </div>                   
+                    
+                        </form>
 
 
+                        </div>
+                        
+                       
+                </div>
+            </div>
+        </div>
+<!-- End Add modal -->
 
 
 

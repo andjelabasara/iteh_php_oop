@@ -25,6 +25,20 @@ class User{
         return $conn->query($query);
 
     }
+    public static function getIdByEmail($user,$conn){
+        $query = "  select * from user where email='$user->email' ";
+        $myArray = array();
+        $result= $conn->query($query);
+        if($result){
+            while($row = $result->fetch_array()){
+
+                $myArray[] = $row;
+            }
+        }
+ 
+        return $myArray[0]["id"];
+
+    }
 
    
    

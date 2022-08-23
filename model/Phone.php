@@ -29,7 +29,7 @@ class Phone{
     public static function addPhone($phone, $conn){
 
         $query= "insert into phone(model,description,price,user ) values('$phone->model','$phone->description',$phone->price,$phone->user )";
-
+        
         return $conn->query($query);
         
 
@@ -39,6 +39,7 @@ class Phone{
     public static function getPhoneById($id, $conn){
 
         $query= "select * from phone p inner join user u on u.id=p.user where p.id=$id";
+        
         return $conn->query($query);
 
 
