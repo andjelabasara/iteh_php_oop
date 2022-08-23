@@ -36,15 +36,10 @@ class User{
             }
         }
  
-        return $myArray[0]["id"];
+        return $myArray[0]["userId"];
 
     }
-
-   
-   
  
-
-
 
 
 }

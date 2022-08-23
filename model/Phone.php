@@ -21,7 +21,7 @@ class Phone{
 
     public static function getAllPhones($conn){
        
-        $query= "select * from phone p inner join user u on u.id=p.user";
+        $query= "select * from phone p inner join user u on u.userId=p.user";
         return $conn->query($query);
     }
 
@@ -38,7 +38,7 @@ class Phone{
 
     public static function getPhoneById($id, $conn){
 
-        $query= "select * from phone p inner join user u on u.id=p.user where p.id=$id";
+        $query= "select * from phone p inner join user u on u.userId=p.user where p.id=$id";
         
         return $conn->query($query);
 

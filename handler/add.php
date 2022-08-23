@@ -2,12 +2,12 @@
     include '../dbbroker.php';
 
     include '../home.php';
-    include 'login.php';
+    include '../login.php';
     
     if(  isset($_POST["description"]) && isset($_POST["model"]) && isset($_POST["price"]) ){
         
         
-        $phone = new Phone(null,$_POST["model"],$_POST["description"],$_POST["price"],$_SESSION['currentUser'] );
+        $phone = new Phone(null,$_POST["model"],$_POST["description"],$_POST["price"],1 );
         
         $status= Phone::addPhone($phone,$conn);
         

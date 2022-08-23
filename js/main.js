@@ -86,9 +86,7 @@ $('#addform').submit(function () {
         data: serijalizacija
     });
 
-    request.done(function (response, textStatus, jqXHR) {
-        
- 
+    request.done(function (response, textStatus, jqXHR) { 
             alert("Telefon dodat ");
             console.log("Uspesno dodavanje");
             location.reload(true);
