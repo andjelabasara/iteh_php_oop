@@ -7,9 +7,6 @@ class Phone{
     private $price;
     private $user;
  
-
-
-
     public function __construct($id=null,$model=null,$description=null,$price=null,$user=null ) 
     {
         $this->id=$id;
@@ -21,6 +18,9 @@ class Phone{
 
     }
  
+
+
+    
 
 }
 
